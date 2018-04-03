@@ -32,6 +32,7 @@ Your store should offer the following methods:
 * `.getAll()`
   * returns array of all objects
   * return empty array `[]` when no objects
+  * do **not** return the underlying array
 * `.remove(<id>)`
   * removes the object from the store that has that id
   * return `{ removed: true }` if the object was removed, else return `{ removed: false }` if the 
