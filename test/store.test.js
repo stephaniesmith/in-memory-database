@@ -74,6 +74,6 @@ describe('store', () => {
     it('returns true if the object is removed form the array', () => {
         const savedpodcasts = newStore.save(podcasts);
         const podcastRemoved = newStore.remove(savedpodcasts[0]._id);
-        assert.equal(podcastRemoved, { removed: true });
+        assert.deepEqual(podcastRemoved, { removed: true });
     });
 });
