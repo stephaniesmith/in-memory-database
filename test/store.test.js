@@ -65,9 +65,11 @@ describe('store', () => {
         assert.deepEqual(getPodcast, null);
     });
 
-    // it('', () => {
-    //     assert.equal();
-    // });
+    it('returns all the objects from the newStore', () => {
+        const savedpodcasts = newStore.save(podcasts);
+        const getAllPodcasts = newStore.getAll(savedpodcasts);
+        assert.deepEqual(getAllPodcasts, newStore.array);
+    });
 
     // it('', () => {
     //     assert.equal();
