@@ -22,3 +22,11 @@ This function will return to you an array of all the objects in the Store.
 ### `Store.remove(id)`
 
 This function takes an id as an argument. If the id exist it will remove the object with that id from the array and returnt to you `{ removed: true }` and if the id does not exist it will return `{ removed: false }`;
+
+## Author
+
+Stephanie Smith <stephanie.lauren.design@gmail.com>
+
+## NPM Packages
+
+uniqid <https://www.npmjs.com/package/uniqid>
