@@ -49,13 +49,20 @@ describe('store', () => {
         const savedpodcasts = newStore.save(podcasts);
         const podcastId = savedpodcasts[1]._id;
         const getPodcast = newStore.get(podcastId);
-        assert.equal(getPodcast, 
+        assert.deepEqual(getPodcast, 
             {
                 _id: podcasts[1]._id,
                 name: 'Welcome to Night Vale',
                 host: 'Cecil Palmer'
             }
         );
+    });
+
+    it('return null if the id does not exist ', () => {
+        newStore.save(podcasts);
+        const podcastId = 'fake id';
+        const getPodcast = newStore.get(podcastId);
+        assert.deepEqual(getPodcast, null);
     });
 
     // it('', () => {
