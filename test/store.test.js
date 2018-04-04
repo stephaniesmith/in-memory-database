@@ -76,4 +76,10 @@ describe('store', () => {
         const podcastRemoved = newStore.remove(savedpodcasts[0]._id);
         assert.deepEqual(podcastRemoved, { removed: true });
     });
+
+    it('returns false if the object is removed form the array', () => {
+        newStore.save(podcasts);
+        const podcastRemoved = newStore.remove('wrong id');
+        assert.deepEqual(podcastRemoved, { removed: false });
+    });
 });
