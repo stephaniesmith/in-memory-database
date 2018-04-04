@@ -45,9 +45,18 @@ describe('store', () => {
         );
     });
 
-    // it('', () => {
-    //     assert.equal();
-    // });
+    it('get a single object from newStore by _id and return it ', () => {
+        const savedpodcasts = newStore.save(podcasts);
+        const podcastId = savedpodcasts[1]._id;
+        const getPodcast = newStore.get(podcastId);
+        assert.equal(getPodcast, 
+            {
+                _id: podcasts[1]._id,
+                name: 'Welcome to Night Vale',
+                host: 'Cecil Palmer'
+            }
+        );
+    });
 
     // it('', () => {
     //     assert.equal();
